@@ -5,21 +5,21 @@ module.exports = {
       return queryInterface.bulkInsert('Lotes', [{
          cod_lote: 5541,
          etapa: 'Recebimento',
-         responsavel: 'Seu Zé',
+         responsavel: 'José Francisco',
          maquina: 'Coletor digital (scanner)',
          data_inicio: new Date(),
-         data_fim: new Date(new Date().getDate() + 10), //finaliza em 10 dias
+         data_fim: new Date(new Date().getDate() + 10),
          data_atualizacao: new Date(),
-         status: 'Concluído', //não lembro status acordados com os caras
+         status: 'Concluído',
          id_produto: 235762,
-         trajeto: 'Usinagem;Lavagem;Acabamento;Estoque', //tbm n lembro
+         trajeto: 'Usinagem;Lavagem;Acabamento;Estoque',
          quantidade_produtos: 570,
          createdAt: new Date(),
          updatedAt: new Date()
       },{
          cod_lote: 5553,
          etapa: 'Acabamento',
-         responsavel: 'Jão',
+         responsavel: 'João Paulo',
          maquina: 'CNC',
          data_inicio: new Date(),
          data_fim: new Date(new Date().getDate() + 2),
@@ -33,7 +33,7 @@ module.exports = {
       },{
          cod_lote: 5579,
          etapa: 'Lavagem',
-         responsavel: 'Xespirito',
+         responsavel: 'Fernando Duarte',
          maquina: 'Lavadora',
          data_inicio: new Date(),
          data_fim: new Date(new Date().getDate() + 7),
@@ -47,7 +47,7 @@ module.exports = {
       },{
          cod_lote: 5595,
          etapa: 'Recebimento',
-         responsavel: 'Fernandinho',
+         responsavel: 'Lucas Souza',
          maquina: 'Coletor digital (scanner)',
          data_inicio: new Date(),
          data_fim: new Date(new Date().getDate() + 10),
