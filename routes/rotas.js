@@ -11,9 +11,6 @@ module.exports = (app, db) => {
     app.get('/home', (req, res) =>{
         return db.Lote.findAll()
             .then(lotes =>  {
-                res.append('Access-Control-Allow-Methods', 'GET,POST,PUT,DEL');
-                res.append('Access-Control-Allow-Headers', 'Content-Type');
-                res.append('Access-Control-Allow-Origin', '*');
                 res.status(200).send(lotes);
             })                
             .catch((err) => {
@@ -27,9 +24,6 @@ module.exports = (app, db) => {
         const id = parseInt(req.params.lote)
         return db.Lote.findOne({where: {cod_lote: id}})
             .then((lote) => {
-                res.append('Access-Control-Allow-Methods', 'GET,POST,PUT,DEL');
-                res.append('Access-Control-Allow-Headers', 'Content-Type');
-                res.append('Access-Control-Allow-Origin', '*');
                 res.status(200).send(lote);
             })
             .catch((err) => {
@@ -65,9 +59,6 @@ module.exports = (app, db) => {
             quantidade_produtos
         })
             .then((lote) => {
-                res.append('Access-Control-Allow-Methods', 'GET,POST,PUT,DEL');
-                res.append('Access-Control-Allow-Headers', 'Content-Type');
-                res.append('Access-Control-Allow-Origin', '*');
                 res.status(200).send(lote);
             })
             .catch((err) => {
@@ -108,9 +99,6 @@ module.exports = (app, db) => {
                     quantidade_produtos
                 })
                 .then(() => {
-                    res.append('Access-Control-Allow-Methods', 'GET,POST,PUT,DEL');
-                    res.append('Access-Control-Allow-Headers', 'Content-Type');
-                    res.append('Access-Control-Allow-Origin', '*');
                     res.status(200).send(lotes);
                 })
                 .catch((err) => {
