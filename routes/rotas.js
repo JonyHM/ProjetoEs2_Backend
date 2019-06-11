@@ -46,6 +46,7 @@ module.exports = (app, db) => {
     
     //criar novo lote
     app.post('/lot/create/', (req, res) => {
+        console.log(req.body)
         const {
             cod_lote,
             id_produto,
@@ -70,33 +71,22 @@ module.exports = (app, db) => {
     //atualizar lote
     app.put('/lot/update/:lote', (req, res) => {
         const id = parseInt(req.params.lote)
+        console.log(req.body);
         return db.Lote.findOne({where: {cod_lote: id}})
             .then((lote) => {
                 const {
                     cod_lote,
-                    etapa,
                     responsavel,
-                    maquina,
-                    data_inicio,
-                    data_fim,
-                    data_atualizacao,
                     status,
-                    id_produto,
-                    trajeto,
-                    quantidade_produtos
+                    etapa,
+                    maquina,
                 } = req.body
                 return lote.update({
                     cod_lote,
-                    etapa,
                     responsavel,
-                    maquina,
-                    data_inicio,
-                    data_fim,
-                    data_atualizacao,
                     status,
-                    id_produto,
-                    trajeto,
-                    quantidade_produtos
+                    etapa,
+                    maquina,
                 })
                 .then(() => {
                     res.status(200).send(lotes);
