@@ -10,7 +10,7 @@ module.exports = {
          data_inicio: new Date(),
          data_fim: new Date(new Date().getDate() + 10), //finaliza em 10 dias
          data_atualizacao: new Date(),
-         status: 'Disponível', //não lembro status acordados com os caras
+         status: 'Concluído', //não lembro status acordados com os caras
          id_produto: 235762,
          trajeto: 'Usinagem;Lavagem;Acabamento;Estoque', //tbm n lembro
          quantidade_produtos: 570,
@@ -24,7 +24,7 @@ module.exports = {
          data_inicio: new Date(),
          data_fim: new Date(new Date().getDate() + 2),
          data_atualizacao: new Date(),
-         status: 'Disponível',
+         status: 'Concluído',
          id_produto: 235893,
          trajeto: 'Usinagem;Lavagem;Acabamento;Estoque',
          quantidade_produtos: 570,
@@ -52,7 +52,7 @@ module.exports = {
          data_inicio: new Date(),
          data_fim: new Date(new Date().getDate() + 10),
          data_atualizacao: new Date(),
-         status: 'Disponível',
+         status: 'Concluído',
          id_produto: 239751,
          trajeto: 'Usinagem;Lavagem;Acabamento;Estoque',
          quantidade_produtos: 570,
